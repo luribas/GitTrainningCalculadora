@@ -22,6 +22,7 @@ public class CalculadoraJava {
         System.out.println("2- Subtração");
         System.out.println("3- Multiplicação");
         System.out.println("4- Divisão");
+        System.out.println("5- Ao quadrado");
         System.out.print("Opção desejada: ");
         op = scn.nextInt();
         
@@ -61,6 +62,13 @@ public class CalculadoraJava {
                 result = divisao(num1, num2);
                 System.out.println("Resultado: " + result);
                 break;
+            
+            case 5:
+                System.out.print("Numero: ");
+                num1 = scn.nextInt();
+                result = quadrado(num1);
+                System.out.println("Resultado: " + result);
+                break;
                 
             default:
                 break;
@@ -89,6 +97,9 @@ public class CalculadoraJava {
         int result = num1 / num2;
         return result;
     }
-
     
+    public static int quadrado (int base){
+        int result = base^2;
+        return result;
+    }
 }
