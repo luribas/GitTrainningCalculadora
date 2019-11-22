@@ -19,7 +19,9 @@ public class CalculadoraJava {
         int num1, num2, result, op;
         
         System.out.println("1- Soma");
-        System.out.println("2- Subtracao");
+        System.out.println("2- Subtração");
+        System.out.println("3- Multiplicação");
+        System.out.println("4- Divisão");
         System.out.print("Opção desejada: ");
         op = scn.nextInt();
         
@@ -40,6 +42,25 @@ public class CalculadoraJava {
                 num2 = scn.nextInt();
                 result = subtracao(num1, num2);
                 System.out.println("Resultado: " + result);
+                break;
+            
+            case 3:
+                System.out.print("Primeiro numero: ");
+                num1 = scn.nextInt();
+                System.out.print("Segundo número: ");
+                num2 = scn.nextInt();
+                result = multiplicacao(num1, num2);
+                System.out.println("Resultado: " + result);
+                break;
+            
+            case 4:
+                System.out.print("Primeiro numero: ");
+                num1 = scn.nextInt();
+                System.out.print("Segundo número: ");
+                num2 = scn.nextInt();
+                result = divisao(num1, num2);
+                System.out.println("Resultado: " + result);
+                break;
                 
             default:
                 break;
@@ -59,6 +80,15 @@ public class CalculadoraJava {
          return result;
     }
 
+    public static int multiplicacao (int num1, int num2){
+        int result = num1 * num2;
+        return result;
+    }
+    
+    public static int divisao (int num1, int num2){
+        int result = num1 / num2;
+        return result;
+    }
 
     
 }
